@@ -19,7 +19,7 @@ class userController extends Controller
             'age'=>'required | integer',
             'phone'=>'required | min:10',
             'pass'=>'required | min:8',
-            'nationalId'=>'required | min:14 | max: 14',
+            'nationalId'=>'required | digits: 14',
             // 'nationalId'=>'required | size: 14',  ******** don't never match . why???
             'address'=>'required | max: 50',
             'about'=>'required | min:30 | max: 100',
