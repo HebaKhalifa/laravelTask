@@ -13,5 +13,6 @@
         <p>age: {{ $age }}</p>
         <p>nationalId: {{ $nationalId }}</p>
         <p>about: {{ $about_user }}</p>
+        <a href=" {{url('display')}} " class="btn btn-primary">show all users</a>
     </div>
 </main>

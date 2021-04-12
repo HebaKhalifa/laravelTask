@@ -44,4 +44,11 @@ class userController extends Controller
         User::where('id', $req->id)->delete();
         return redirect('display');
     }
+    
+    function edit(Request $req)
+    {
+        $user=User::find($req->id);
+        // dd($user);
+        return view('edit',['user'=>$user]);
+    }
 }

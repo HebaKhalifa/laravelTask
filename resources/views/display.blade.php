@@ -27,8 +27,8 @@
                 <td>{{ $user->nationalId }}</td>
                 <td>{{ $user->address }}</td>
                 <td>
-                    <a href=" {{ url('') }} ">Edit</a>
-                    <a href=" {{ url('delete/'.$user->id) }} ">Delete</a>
+                    <a href=" {{ url('edit/'.$user->id) }} " class="btn btn-primary">Edit</a>
+                    <a href=" {{ url('delete/'.$user->id) }} " class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         @endforeach
