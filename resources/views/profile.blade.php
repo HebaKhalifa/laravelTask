@@ -12,6 +12,6 @@
         <p>phone: {{ $phone }}</p>
         <p>age: {{ $age }}</p>
         <p>nationalId: {{ $nationalId }}</p>
-        <p>about: {{ $about }}</p>
+        <p>about: {{ $about_user }}</p>
     </div>
 </main>

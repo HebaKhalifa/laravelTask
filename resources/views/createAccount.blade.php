@@ -65,10 +65,10 @@
                         </div>
 
                         <div class="row my-3">
-                            <div class="col-md-3 col-12"><label for="pass" class="form-label">Password</label></div>
+                            <div class="col-md-3 col-12"><label for="password" class="form-label">Password</label></div>
                             <div class="col-md-8 col-12">
-                                <input type="password" name="pass" class="form-control" value="{{ old('pass') }}">
-                                @error('pass')
+                                <input type="password" name="password" class="form-control" value="{{ old('password') }}">
+                                @error('password')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
@@ -79,7 +79,7 @@
                             <div class="col-md-3 col-12"><label for="nationalID" class="form-label">Nationa lID</label>
                             </div>
                             <div class="col-md-8 col-12">
-                                <input type="password" name="nationalId" class="form-control" value="{{ old('nationalId') }}">
+                                <input type="text" name="nationalId" class="form-control" value="{{ old('nationalId') }}">
                                 @error('nationalId')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -97,10 +97,10 @@
 
                         </div>
                         <div class="row my-3">
-                            <div class="col-md-3 col-12"><label for="about" class="form-label">About Me</label></div>
+                            <div class="col-md-3 col-12"><label for="about_user" class="form-label">About Me</label></div>
                             <div class="col-md-8 col-12">
-                                <textarea name="about" class="form-control">{{ old('about') }}</textarea>
-                                @error('about')
+                                <textarea name="about_user" class="form-control">{{ old('about_user') }}</textarea>
+                                @error('about_user')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>

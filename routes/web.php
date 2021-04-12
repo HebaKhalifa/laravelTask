@@ -27,6 +27,15 @@ Route::get('/', function () {
 
 
 
-Route::get('createAccount', 'userController@create');
+// routes related to articles
+Route::get('addArticle', 'blog@create');
+Route::post('submit', 'blog@submit');
 
+
+// routes related to user
+Route::get('createAccount', 'userController@create');
 Route::post('profile', 'userController@submit');
+Route::get('display', 'userController@display');
+Route::get('delete/{id}', 'userController@delete');
+Route::get('edit/{id}', 'userController@edit');
+
