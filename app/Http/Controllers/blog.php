@@ -27,8 +27,33 @@ class blog extends Controller
         ]);
         Article::create($data);
         echo "data inserted";
-        return redirect('display') ;
+        return redirect('displayArticles') ;
     }
 
-    
+    function display(){
+        $data =Article::get();
+        return view('displayArticles', ['data' => $data]);
+    }
+
+    function edit(Request $req)
+    {
+        $article=Article::find($req->id);
+        // dd($user);
+        return view('editArticle',['user'=>$article]);
+    }
+
+    function update(Request $req){
+        $data=$this->validate($req,[
+            'title'=>'required | min:8 | max: 30',
+            'content'=>'required | max:100',
+        ]);
+
+        $op=Article::where('id',$req->id)->update($data);
+        if($op){
+            echo "Done";
+        }else{
+            echo "don't";
+        }
+    }
+
 }

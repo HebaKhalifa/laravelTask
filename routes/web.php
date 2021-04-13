@@ -30,6 +30,9 @@ Route::get('/', function () {
 // routes related to articles
 Route::get('addArticle', 'blog@create');
 Route::post('submit', 'blog@submit');
+Route::get('displayArticles', 'blog@display');
+Route::get('editArticle/{id}', 'blog@edit');
+Route::post('updateArticle', 'blog@update');
 
 
 // routes related to user
@@ -39,3 +42,6 @@ Route::get('display', 'userController@display');
 Route::get('delete/{id}', 'userController@delete');
 Route::get('edit/{id}', 'userController@edit');
 
+
+
+Route::resource('users','usersController');
